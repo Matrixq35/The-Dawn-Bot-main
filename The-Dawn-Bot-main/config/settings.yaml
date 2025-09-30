@@ -1,0 +1,54 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#                           APPLICATION CONFIGURATION
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+application_settings:
+  threads: 5
+  ping_interval: 600 # seconds
+  database_url: "sqlite://database/database.sqlite3" # SQlite or postgres, e.g. sqlite://database.db or postgres://user:password@localhost/dbname
+  skip_logged_accounts: true
+  shuffle_accounts: true
+  check_uniqueness_of_proxies: true
+  disable_auto_proxy_change: false # disable automatic proxy change for farming (for example for ISP proxy)
+
+
+attempts_and_delay_settings:
+  delay_before_start:
+    min: 0 # seconds
+    max: 0 # seconds
+
+  error_delay: 5 # seconds
+  max_login_attempts: 5
+  max_stats_attempts: 3
+  max_farm_attempts: 3
+
+
+redirect_settings:
+  enabled: false
+  email: ""
+  password: ""
+  imap_server: ""
+  use_proxy: false
+
+
+imap_settings:
+  use_proxy_for_imap: false
+
+  use_single_imap:
+    enable: false
+    imap_server: "imap.gmail.com"
+
+  servers:
+    gmail.com: imap.gmail.com
+    yahoo.com: imap.mail.yahoo.com
+    icloud.com: imap.mail.me.com
+    mail.ru: imap.mail.ru
+    gmx.com: imap.gmx.com
+    gmx.net: imap.gmx.net
+    gmx.de: imap.gmx.net
+    onet.pl: imap.poczta.onet.pl
+    onet.com.pl: imap.poczta.onet.pl
+    op.pl: imap.poczta.onet.pl
+    onet.eu: imap.poczta.onet.pl
+    gazeta.pl: imap.gazeta.pl
